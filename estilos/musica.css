@@ -1,0 +1,152 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+    position: relative;
+    height: 70px;
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-container img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+#check {
+    display: none;
+}
+
+.menu-hamburguesa {
+    margin-left: auto;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    z-index: 10;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    width: 250px;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.nav-menu li a:hover {
+    background-color: #333;
+}
+
+#check:checked ~ .nav-menu {
+    max-height: 500px;
+    padding: 20px;
+}
+.discografia-seccion{
+padding: 60px 20px;
+text-align: center;
+background-color: #f9f9f9;
+}
+.discografia-seccion h1 {
+    font-size: 32px;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+.albumes-col{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.album-lali{
+    border-radius: 28px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 21px 21px 36px #828282, -21px -21px 36px #ffffff;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.album-lali iframe {
+ width: 100%;
+ border-radius: 8px;
+ height: 352px;
+}
+.album-lali h2 {
+    margin-top: 15px;
+    font-size: 19px;
+    color: #555;
+}
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 0;
+}
+
+.social-links-footer {
+    margin-bottom: 20px;
+}
+
+.social-links-footer a {
+    color: #aaa;
+    font-size: 28px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links-footer a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.copyright {
+    font-size: 14px;
+    margin: 0;
+}

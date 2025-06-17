@@ -1,0 +1,164 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+    position: relative;
+    height: 70px;
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-container img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+#check {
+    display: none;
+}
+
+.menu-hamburguesa {
+    margin-left: auto;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    z-index: 10;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    width: 250px;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.nav-menu li a:hover {
+    background-color: #333;
+}
+
+#check:checked ~ .nav-menu {
+    max-height: 500px;
+    padding: 20px;
+}
+.video-container {
+    width: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.seccion-imagenes h1{
+ font-size: 25px;
+ color: #111;
+ text-transform: uppercase;
+ margin-bottom: 40px;
+ letter-spacing: 2px;
+ padding-top: 25px;
+ text-align: center;
+
+}
+.galeria-imagenes {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 25px;
+padding: 30px 20px;
+max-width: 1200px;
+margin: 0 auto;
+box-sizing: border-box;
+}
+.card-lali {
+background-color: #1a1a1a;
+border-radius: 12px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+overflow: hidden;
+width: 100%;
+max-width: 320px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+border: 1px solid #333;
+}
+.card-lali:hover {
+transform: translateY(-8px);
+ box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.card-lali img {
+ width: 100%;
+ height: 320px;
+ object-fit: cover;
+ display: block;
+}
+
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 0;
+}
+
+.social-links-footer {
+    margin-bottom: 20px;
+}
+
+.social-links-footer a {
+    color: #aaa;
+    font-size: 28px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links-footer a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.copyright {
+    font-size: 14px;
+    margin: 0;
+}
